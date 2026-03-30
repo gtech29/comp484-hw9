@@ -1,0 +1,67 @@
+/* Global styles 
+------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.content-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+  /* background-color:black; */
+  font-size: large;
+}
+
+.navbar {
+  /* Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #c5cbd8;
+  z-index: 1000;
+  font-size: x-large;
+}
+
+.nav-item {
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.requirement-section  {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.date-style {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: x-large;
+}
