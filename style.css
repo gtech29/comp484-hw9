@@ -31,6 +31,18 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+/* Requirement Section */
+.requirement-item {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: x-large;
+
+}
+
+.requirement-item p {
+  text-align: center;
+}
 /* End Global styles------------------------------------*/
 
 /* navbar */
@@ -55,16 +67,3 @@ body {
   transition: background-color 0.2s ease;
 }
 
-/* Part 1 Section */
-.requirement-item {
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  font-size: x-large;
-  
-}
-.requirement-item p{
-  text-align:center;
-}
-
-/* Part 2 Section */

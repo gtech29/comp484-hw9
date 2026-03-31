@@ -27,51 +27,102 @@ const generateDate = () => {
   postDiv.appendChild(title);
   postDiv.appendChild(paragraph);
   dateContainer.appendChild(postDiv);
-
-  // return the date
-  return postDiv;
 };
 generateDate();
 
 // Part 2: Number Conversion Test
 const numConversions = () => {
+  // get container
   const numContainer = document.getElementById("conversions");
+  // create h1 and p elements
   const titleConversions = document.createElement("h1");
   titleConversions.textContent = "Part 2: Number Conversion Tests";
-
+  // create the div
   const postDiv = document.createElement("div");
   postDiv.classList.add("requirement-item");
 
   // First Variable
   const firstString = "37";
   const conv1 = Number(firstString);
+  const convInt = Number.isInteger(conv1);
+  const notAnum = Number.isNaN(conv1);
   const p1 = document.createElement("p");
-  p1.textContent = `Original value: "${firstString}" → Converted value: ${conv1}`;
+  p1.textContent = `Original value: "${firstString}" → Converted value: ${conv1} → isNaN: ${notAnum}  → isInteger: ${convInt} `;
 
   // Second Variable
   const secondString = "27.13";
   const conv2 = Number(secondString);
+  const convInt2 = Number.isInteger(conv2);
+  const notAnum2 = Number.isNaN(conv2);
   const p2 = document.createElement("p");
-  p2.textContent = `Original value: "${secondString}" → Converted value: ${conv2}`;
+  p2.textContent = `Original value: "${secondString}" → Converted value: ${conv2} → isNaN: ${notAnum2}  → isInteger: ${convInt2} `;
 
   // Third Variable
   const thirdString = "14";
   const conv3 = Number(thirdString);
+  const convInt3 = Number.isInteger(conv3);
+  const notAnum3 = Number.isNaN(conv3);
   const p3 = document.createElement("p");
-  p3.textContent = `Original value: "${thirdString}" → Converted value: ${conv3}`;
+  p3.textContent = `Original value: "${thirdString}" → Converted value: ${conv3} → isNaN: ${notAnum3}  → isInteger: ${convInt3} `;
 
   // Fourth Variable
   const notAnumber = "I am not a number";
   const conv4 = Number(notAnumber);
+  const convInt4 = Number.isInteger(conv4);
+  const notAnum4 = Number.isNaN(conv4);
   const p4 = document.createElement("p");
-  p4.textContent = `Original value: "${notAnumber}" → Converted value: ${conv4}`;
+  p4.textContent = `Original value: "${notAnumber}" → Converted value: ${conv4} → isNaN: ${notAnum4}  → isInteger: ${convInt4}`;
 
+  // append the results
   postDiv.appendChild(p1);
   postDiv.appendChild(p2);
   postDiv.appendChild(p3);
   postDiv.appendChild(p4);
-
   numContainer.appendChild(titleConversions);
   numContainer.appendChild(postDiv);
 };
 numConversions();
+
+// Part 3: Number Formatting and Math Results
+const numberFormatting = () => {
+  // get container
+  const mathContainer = document.getElementById("math-formatting");
+  // create h1 and p elements
+  const titleMath = document.createElement("h1");
+  titleMath.textContent = "Part 3: Number Formatting and Math Results";
+
+  // create the div
+  const postDiv = document.createElement("div");
+  postDiv.classList.add("requirement-item");
+
+  // Perform Multiplication
+  const premiumMembership = "26.99";
+  // Format premiumMembership
+  const formattedNum = Number.parseFloat(premiumMembership);
+  // get yearly membership
+  const yearlyMembership = formattedNum * 12;
+  // post result
+  const multiplication = document.createElement("p");
+  multiplication.innerHTML = `Cost of Netflix Premium membership: $` + `${premiumMembership}` + `<br> Cost of Netflix Annual Membership: $` + `${yearlyMembership}`;
+  postDiv.appendChild(multiplication);
+
+  
+  // Perform Addition, Division and Formatting
+  const appetizer = 8.99;
+  const mainCourse = 15.99;
+  const drink = 5.99;
+
+  const totalBill = appetizer + mainCourse + drink;
+
+  const splitBill = totalBill/2;
+  const formatBill = splitBill.toFixed(2);
+
+  const addition = document.createElement("p");
+  addition.innerHTML = `The total bill is $` + `${totalBill}` + `<br>` +`If you split the bill in half the amount is: $` + `${formatBill}`;
+  postDiv.appendChild(addition);
+
+  mathContainer.appendChild(titleMath);
+  mathContainer.appendChild(postDiv);
+};
+
+numberFormatting();
