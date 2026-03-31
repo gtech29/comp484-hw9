@@ -1,4 +1,3 @@
-
 # JavaScript Built-in Objects and DOM Manipulation
 
 ## 1. Built-in Objects and Methods Used
@@ -10,7 +9,8 @@
 
 ## 2. Live Project Link
 
-[View the live webpage here](REPLACE_WITH_YOUR_GITHUB_PAGES_LINK)
+- Repo Link: https://github.com/gtech29/comp484-hw9
+- GH Pages Link: [gtech29.github.io/comp484-hw9/](https://gtech29.github.io/comp484-hw9/ "https://gtech29.github.io/comp484-hw9/")
 
 ## 3. Project Screenshot
 
