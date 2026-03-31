@@ -80,6 +80,11 @@ const numConversions = () => {
   postDiv.appendChild(p4);
   numContainer.appendChild(titleConversions);
   numContainer.appendChild(postDiv);
+
+  return {
+    firstCheck: notAnum,
+    fourthCheck: notAnum4,
+  };
 };
 numConversions();
 
@@ -103,26 +108,65 @@ const numberFormatting = () => {
   const yearlyMembership = formattedNum * 12;
   // post result
   const multiplication = document.createElement("p");
-  multiplication.innerHTML = `Cost of Netflix Premium membership: $` + `${premiumMembership}` + `<br> Cost of Netflix Annual Membership: $` + `${yearlyMembership}`;
+  multiplication.innerHTML = `Cost of Netflix Premium membership: $${premiumMembership}<br> Cost of Netflix Annual Membership: $${yearlyMembership}`;
   postDiv.appendChild(multiplication);
 
-  
   // Perform Addition, Division and Formatting
   const appetizer = 8.99;
   const mainCourse = 15.99;
   const drink = 5.99;
 
+  // add the total bill
   const totalBill = appetizer + mainCourse + drink;
 
-  const splitBill = totalBill/2;
+  // we want to split the bill
+  const splitBill = totalBill / 2;
   const formatBill = splitBill.toFixed(2);
 
+  // post the results
   const addition = document.createElement("p");
-  addition.innerHTML = `The total bill is $` + `${totalBill}` + `<br>` +`If you split the bill in half the amount is: $` + `${formatBill}`;
+  addition.innerHTML = `The total bill is $${totalBill}<br>If you split the bill in half the amount is: $${formatBill}`;
   postDiv.appendChild(addition);
 
   mathContainer.appendChild(titleMath);
   mathContainer.appendChild(postDiv);
 };
-
 numberFormatting();
+
+// Part 4: Conditional Messages
+const conditionalMessages = () => {
+  // get container
+  const conditionalContainer = document.getElementById("conditionals");
+  // create h1 and p elements
+  const titleConditionals = document.createElement("h1");
+  titleConditionals.textContent = "Part 4: Conditional Messages";
+  // create the div
+  const postDiv = document.createElement("div");
+  postDiv.classList.add("requirement-item");
+
+  // post the title
+  conditionalContainer.appendChild(titleConditionals);
+  conditionalContainer.appendChild(postDiv);
+
+  // Storing the packed results from Part 2
+  const conversionResults = numConversions();
+  const messageParagraph = document.createElement("p");
+  const messageParagraph2 = document.createElement("p");
+
+  // first conditional check
+  if (conversionResults.firstCheck == false) {
+    messageParagraph.textContent = `This value is an integer.`;
+  } else {
+    messageParagraph.textContent = `This value is not a valid number.`;
+  }
+
+  // second conditional check
+  if (conversionResults.fourthCheck == true) {
+    messageParagraph2.textContent = `This value is not a valid number.`;
+  } else {
+    messageParagraph2.textContent = `This value is an integer.`;
+  }
+  postDiv.appendChild(messageParagraph);
+  postDiv.appendChild(messageParagraph2);
+};
+conditionalMessages();
