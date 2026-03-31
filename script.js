@@ -83,10 +83,11 @@ const numConversions = () => {
 
   return {
     firstCheck: notAnum,
+    secondCheck: notAnum2,
+    thirdCheck: notAnum3,
     fourthCheck: notAnum4,
   };
 };
-numConversions();
 
 // Part 3: Number Formatting and Math Results
 const numberFormatting = () => {
@@ -133,6 +134,8 @@ const numberFormatting = () => {
 };
 numberFormatting();
 
+
+
 // Part 4: Conditional Messages
 const conditionalMessages = () => {
   // get container
@@ -149,7 +152,7 @@ const conditionalMessages = () => {
   conditionalContainer.appendChild(postDiv);
 
   // Storing the packed results from Part 2
-  const conversionResults = numConversions();
+  // 
   const messageParagraph = document.createElement("p");
   const messageParagraph2 = document.createElement("p");
 
@@ -169,4 +172,5 @@ const conditionalMessages = () => {
   postDiv.appendChild(messageParagraph);
   postDiv.appendChild(messageParagraph2);
 };
-conditionalMessages();
+const conversionResults = numConversions();
+conditionalMessages(conversionResults);
