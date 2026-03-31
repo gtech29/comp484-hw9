@@ -1,5 +1,4 @@
-/* Global styles 
-------------------------------------*/
+/* Global styles------------------------------------*/
 html {
   box-sizing: border-box;
 }
@@ -14,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
+  padding-top: 60px;
 }
 
 .content-wrapper {
@@ -21,10 +21,19 @@ body {
   margin: 0 auto;
   padding: 50px;
   overflow: hidden;
-  /* background-color:black; */
   font-size: large;
 }
+.requirement-section {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* End Global styles------------------------------------*/
 
+/* navbar */
 .navbar {
   /* Flexbox */
   display: flex;
@@ -46,22 +55,16 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.nav-item:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.requirement-section  {
-  width: 100%;
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction:column;
-}
-
-.date-style {
+/* Part 1 Section */
+.requirement-item {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
   font-size: x-large;
+  
 }
+.requirement-item p{
+  text-align:center;
+}
+
+/* Part 2 Section */
