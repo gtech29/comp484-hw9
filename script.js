@@ -83,9 +83,9 @@ const numConversions = () => {
 
   return {
     firstCheck: notAnum,
-    secondCheck: notAnum2,
-    thirdCheck: notAnum3,
     fourthCheck: notAnum4,
+    firstString,
+    notAnumber
   };
 };
 
@@ -158,16 +158,16 @@ const conditionalMessages = () => {
 
   // first conditional check
   if (conversionResults.firstCheck == false) {
-    messageParagraph.textContent = `This value is an integer.`;
+    messageParagraph.textContent = `This value ${conversionResults.firstString} is a valid integer.`;
   } else {
-    messageParagraph.textContent = `This value is not a valid number.`;
+    messageParagraph.textContent = `This ${conversionResults.firstString} value is not a valid number.`;
   }
 
   // second conditional check
   if (conversionResults.fourthCheck == true) {
-    messageParagraph2.textContent = `This value is not a valid number.`;
+    messageParagraph2.textContent = `This value " ${conversionResults.notAnumber} " is not a valid integer.`;
   } else {
-    messageParagraph2.textContent = `This value is an integer.`;
+    messageParagraph2.textContent = `This value " ${conversionResults.notAnumber} " is an integer.`;
   }
   postDiv.appendChild(messageParagraph);
   postDiv.appendChild(messageParagraph2);
